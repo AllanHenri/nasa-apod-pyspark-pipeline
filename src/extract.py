@@ -8,7 +8,7 @@ def ensure_parent(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
 
 def run_extraction() -> None:
-    url = "https://api.nasa.gov/planetary/apod"
+    url = "https://api.nasa.gov/neo/rest/v1/feed"
     params = {
         "api_key": NASA_API_KEY,
         "start_date": START_DATE,

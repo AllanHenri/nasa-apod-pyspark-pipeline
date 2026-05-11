@@ -1,0 +1,5 @@
+{"timestamp":"2026-05-11T21:26:10.707484Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-11T21:26:10.715820Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/nasa_neows_pipeline.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-11T21:26:10.957038Z","level":"warning","event":"The `airflow.operators.python.PythonOperator` attribute is deprecated. Please use `'airflow.providers.standard.operators.python.PythonOperator'`.","category":"UserWarning","filename":"/opt/airflow/dags/nasa_neows_pipeline.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2026-05-11T21:26:19.066440Z","level":"info","event":"Raw data saved to /opt/airflow/data/raw/NeoWs.json","logger":"task.stdout"}
+{"timestamp":"2026-05-11T21:26:19.069273Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":229}

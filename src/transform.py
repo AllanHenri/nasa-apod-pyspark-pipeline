@@ -8,9 +8,7 @@ def run_transformation() -> None:
 
     df = spark.read.option("multiline", "true").json(str(RAW_OUTPUT))
 
-    neo_map_df = df.select(
-        F.explode("near_earth_objects").alias("approach_date", "asteroids")
-    )
+    neo_map_df = df.select("near_earth_objects")
 
     exploded_dates_df = neo_map_df.select(
         F.explode("near_earth_objects").alias("approach_date", "asteroids")
@@ -47,7 +45,7 @@ def run_transformation() -> None:
         .withColumn("approach_date", F.to_date("approach_date"))
         .withColumn("close_approach_date", F.to_date("close_approach_date"))
         .withColumn("year", F.year("approach_date"))
-        .withColumn("year", F.month("approach_date"))
+        .withColumn("month", F.month("approach_date"))
     )
     final_df.show(truncate=False)
     final_df.printSchema()
